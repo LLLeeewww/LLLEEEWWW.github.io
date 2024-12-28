@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="./global.css" />
+<link rel="stylesheet" href="./gallery.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument Sans:wght@400;500;600&display=swap" />
+</head>
+<body>
+<div class="photography">
+<div class="header">
+<div class="whatever">wHaTeVer</div>
+<div class="blog-parent">
+<div class="blog" id="blogText">Index</div>
+<div class="projects">Projects</div>
+<img class="frame-child" alt="" src="Line 9.svg">
+<div class="projects">Portfolio</div>
+</div>
+</div>
+<div class="photos">
+<div class="work">Work</div>
+<div class="canon-ae-1-parent">
+<div class="hide-it">Canon AE-1</div>
+<div class="simple-collection-parent">
+<div class="simple-collection" id="simpleCollection">
+<img class="simple-collection-child" alt="" src="Frame 6.png">
+<div class="hide-it">Hide it</div>
+</div>
+<div class="lightseal-heaven-collection">
+<img class="f9d534e-cb65-45dd-9c65-97eabf2-icon" alt="" src="4F9D534E-CB65-45DD-9C65-97EABF26BCA4_1_201_a.png">
+<div class="freckled-norway">Freckled Norway</div>
+</div>
+<div class="pleasures-collection">
+<img class="simple-collection-child" alt="" src="Frame 6.png">
+<div class="hide-it">Simple Pleasures</div>
+</div>
+<div class="lightseal-heaven-collection">
+<img class="c-cb21-47d5-a3cb-fcee91892114-icon" alt="" src="5295825C-CB21-47D5-A3CB-FCEE91892114_1_105_c 1.png">
+<div class="freckled-norway">Moments we’ll miss</div>
+</div>
+<div class="pleasures-collection">
+<img class="couples-collection-child" alt="" src="Frame 6.png">
+<div class="hide-it">Couple</div>
+</div>
+<div class="pleasures-collection">
+<img class="simple-collection-child" alt="" src="Frame 6.png">
+<div class="hide-it">Same Time Tomorrow?</div>
+</div>
+</div>
+</div>
+<div class="canon-ae-1-parent">
+<div class="hide-it">Rollei Magic</div>
+<div class="couples-collection-wrapper">
+<div class="pleasures-collection">
+<img class="e5031f5f-7cb1-4e2e-918e-efc852-icon" alt="" src="E5031F5F-7CB1-4E2E-918E-EFC85264856F_1_105_c 1.png">
+<div class="hide-it">soon</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="hideItContainer" class="popup-overlay" style="display:none">
+<div class="hide-it1">
+<div class="header1">
+<div class="whatever1">wHaTeVer</div>
+<div class="blog-group">
+<div class="blog1" id="popupblogText">Index</div>
+<div class="projects1">Projects</div>
+<img class="frame-item" alt="" src="Line 9.svg">
+<div class="projects1">Portfolio</div>
+</div>
+</div>
+<div class="photos1">
+<div class="projects1">Same Time Tomorrow?</div>
+<div class="row">
+<img class="a65e4b34-d21d-4ed2-8368-e10fc1-icon" alt="" src="A65E4B34-D21D-4ED2-8368-E10FC1987909_1_105_c.png">
+</div>
+<div class="row1">
+<img class="image-1-icon" alt="" src="image 1.png">
+<div class="image-2">
+</div>
+</div>
+<div class="row2">
+<div class="image-3">
+</div>
+<img class="image-2-icon" alt="" src="image 2.png">
+</div>
+<div class="row2">
+<img class="b97ce248-4e21-405c-bf1d-133a8c-icon" alt="" src="B97CE248-4E21-405C-BF1D-133A8CDF3362_1_105_c 2.png">
+<div class="image-3">
+</div>
+</div>
+<div class="row4">
+<img class="eaa6cbe5-8bab-4548-8f11-7f88ef-icon" alt="" src="EAA6CBE5-8BAB-4548-8F11-7F88EF322D66_1_105_c 1.png">
+</div>
+<div class="b97ce248-4e21-405c-bf1d-133a8c">
+</div>
+</div>
+</div>
+</div>
+<script>
+var popupblogText = document.getElementById("popupblogText");
+if(popupblogText) {
+popupblogText.addEventListener("click", function (e) {
+// Add your code here
+});
+}
+var blogText = document.getElementById("blogText");
+if(blogText) {
+blogText.addEventListener("click", function (e) {
+// Add your code here
+});
+}
+var simpleCollection = document.getElementById("simpleCollection");
+if(simpleCollection) {
+simpleCollection.addEventListener("click", function () {
+var popup = document.getElementById("hideItContainer");
+if(!popup) return;
+var popupStyle = popup.style;
+if(popupStyle) {
+popupStyle.display = "flex";
+popupStyle.zIndex = 100;
+popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+popupStyle.alignItems = "center";
+popupStyle.justifyContent = "center";
+}
+popup.setAttribute("closable", "");
+var onClick = popup.onClick || function(e) {
+if(e.target === popup && popup.hasAttribute("closable")) {
+popupStyle.display = "none";
+}
+};
+popup.addEventListener("click", onClick);
+});
+}</script></body>
+</html>

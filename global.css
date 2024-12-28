@@ -4,27 +4,47 @@ body {
     line-height: normal;
 }
 
+.popup-overlay {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    }
 
 :root {
     
     /* fonts */
     --font-average-sans: 'Average Sans';
     --font-inter: Inter;
+    --font-instrument-sans: 'Instrument Sans';
     --font-inria-serif: 'Inria Serif';
     --font-inknut-antiqua: 'Inknut Antiqua';
     
     /* font sizes */
-    --font-size-5xl: 24px;
     --font-size-13xl: 32px;
-    --font-size-29xl: 48px;
+--font-size-45xl: 64px;
+--font-size-5xl: 24px;
+--font-size-29xl: 48px;
     
     /* Colors */
     --color-black: #000;
+    --color-linen: rgba(241, 235, 229, 0.9);
+--color-darkslateblue: #756191;
+--color-gainsboro: #dcd7d1;
+--color-gray: rgba(255, 255, 255, 0);
     
     /* Gaps */
     --gap-109xl: 128px;
+    --gap-13xl: 32px;
+--gap-base: 16px;
+--gap-237xl: 256px;
     
     /* Paddings */
     --padding-29xl: 48px;
+    --padding-13xl: 32px;
+--padding-237xl: 256px;
+--padding-29xl: 48px;
+--padding-77xl: 96px;
+
     
 }
