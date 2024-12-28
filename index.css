@@ -4,6 +4,50 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.whatever {
+    position: relative;
+    z-index: 1;
+    }
+    .frame-child {
+    flex: 1;
+    position: relative;
+    max-width: 100px;
+    overflow: hidden;
+    height: 13px;
+    min-width: 10px;
+    }
+    .projects {
+    position: relative;
+    cursor: pointer;
+    }
+    .vector-parent {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    z-index: 0;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    }
+    .header {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--padding-29xl) 96px var(--padding-29xl) var(--padding-29xl);
+    box-sizing: border-box;
+    gap: 256px;
+    text-align: center;
+    font-size: 48px;
+    color: var(--color-black);
+    font-family: var(--font-inter);
+    }
+    
 .top-header {
   display: flex;
   justify-content: space-between;

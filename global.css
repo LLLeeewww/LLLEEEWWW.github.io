@@ -1,0 +1,30 @@
+
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+
+:root {
+    
+    /* fonts */
+    --font-average-sans: 'Average Sans';
+    --font-inter: Inter;
+    --font-inria-serif: 'Inria Serif';
+    --font-inknut-antiqua: 'Inknut Antiqua';
+    
+    /* font sizes */
+    --font-size-5xl: 24px;
+    --font-size-13xl: 32px;
+    --font-size-29xl: 48px;
+    
+    /* Colors */
+    --color-black: #000;
+    
+    /* Gaps */
+    --gap-109xl: 128px;
+    
+    /* Paddings */
+    --padding-29xl: 48px;
+    
+}
