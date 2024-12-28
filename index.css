@@ -43,11 +43,33 @@ body {
 }
 
 .nav-links a {
+  position: relative; /* Position relative to contain the pseudo-element */
   text-decoration: none;
   color: #333;
   font-size: 1rem;
   opacity: 1;
-  transition: opacity 0.5s ease; /* Add transition for fade effect */
+  transition: opacity 5s ease; /* Add transition for fade effect */
+}
+
+.nav-links a::after {
+  content: attr(data-preview); /* Use the data-preview attribute for the preview text */
+  position: absolute;
+  bottom: 100%; /* Position above the link */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.nav-links a:hover::after {
+  opacity: 1;
 }
 
 .nav-links a.hidden {
