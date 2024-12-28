@@ -28,6 +28,13 @@
   // Function to update navigation links
   function updateNavLinks() {
     const currentPage = window.location.pathname.split('/').pop();
+    const navDot = document.querySelector('.nav-dot');
+    const currentLink = document.querySelector(`.nav-links a[href="${currentPage}"]`);
+
+    if (currentLink) {
+      navDot.style.left = currentLink.offsetLeft + 'px';
+    }
+
     document.querySelectorAll('.nav-links a').forEach(link => {
       if (link.getAttribute('href') === currentPage) {
         link.style.pointerEvents = 'none';
@@ -43,6 +50,18 @@
         const url = this.getAttribute('href');
         loadContent(url);
       });
+
+      // Add hover effect to move the dot
+      link.addEventListener('mouseover', function() {
+        navDot.style.left = link.offsetLeft + 'px';
+      });
+    });
+
+    // Move the dot back to the current page link when mouse leaves the header
+    document.querySelector('.top-header').addEventListener('mouseleave', function() {
+      if (currentLink) {
+        navDot.style.left = currentLink.offsetLeft + 'px';
+      }
     });
   }
 

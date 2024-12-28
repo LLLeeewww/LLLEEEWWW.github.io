@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 80px; /* Set the height of the header */
   padding: 10px 20px;
   background-color: #F4F2F7; /* Set your desired header background color */
   box-sizing: border-box;
@@ -49,7 +50,7 @@ body {
   color: #333;
   font-size: 1rem;
   opacity: 1;
-  transition: opacity 5s ease; /* Add transition for fade effect */
+  transition: opacity 0.3s ease; /* Add transition for fade effect */
 }
 
 .nav-links a::after {
@@ -70,7 +71,7 @@ body {
 }
 
 .nav-links a:hover::after {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .nav-links a.hidden {
@@ -79,13 +80,13 @@ body {
 }
 
 .nav-links a:hover {
-  text-decoration: opacity 1;
+  text-decoration: underline;
 }
 
 .nav-dot {
   position: absolute;
-  bottom: 0px;
-  left: 12px;
+  bottom: -5px;
+  left: 0;
   width: 10px;
   height: 10px;
   background-color: #333;
@@ -98,11 +99,12 @@ body {
   padding: 20px;
   box-sizing: border-box;
   width: 100%;
-  margin-top: 80px; /* Add margin to avoid content being hidden behind the fixed header */
+  margin-top: 80px; /* Ensure this value matches the height of the header */
 }
-
+/* Hide navigation links on small screens for better mobile experience */
 @media (max-width: 600px) {
   .nav-links {
     display: none;
   }
 }
+
