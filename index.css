@@ -4,7 +4,7 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: 'Inter', sans-serif;
-  background-color: #f8f9fa; /* Set your desired background color */
+  background-color: #795F9D; /* Set your desired background color */
 }
 
 body {
@@ -21,7 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #F1EBE5E5; /* Set your desired header background color */
+  background-color: #F4F2F7; /* Set your desired header background color */
   box-sizing: border-box;
   width: 100%;
   border: none; /* Remove any border */
