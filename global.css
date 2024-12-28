@@ -4,13 +4,6 @@ body {
     line-height: normal;
 }
 
-.popup-overlay {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    inset: 0;
-    }
-
 :root {
     
     /* fonts */
@@ -28,9 +21,9 @@ body {
     
     /* Colors */
     --color-black: #000;
-    --color-linen: rgba(241, 235, 229, 0.9);
+    --color-linen: rgba(185, 104, 22, 0.9);
 --color-darkslateblue: #756191;
---color-gainsboro: #dcd7d1;
+--color-gainsboro: #aa722f;
 --color-gray: rgba(255, 255, 255, 0);
     
     /* Gaps */
