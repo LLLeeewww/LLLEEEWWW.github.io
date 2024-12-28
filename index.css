@@ -85,8 +85,8 @@ body {
 
 .nav-dot {
   position: absolute;
-  bottom: 0px;
-  left: 12px;
+  bottom: 50%;å
+  left: 100%;
   width: 8px;
   height: 8px;
   background-color: #333;
