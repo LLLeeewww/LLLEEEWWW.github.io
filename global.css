@@ -8,7 +8,8 @@ body {
     
     /* fonts */
     --font-average-sans: 'Average Sans';
-    --font-inter: Inter;
+        --font-inter: Inter;
+        
     --font-instrument-sans: 'Instrument Sans';
     --font-inria-serif: 'Inria Serif';
     --font-inknut-antiqua: 'Inknut Antiqua';
