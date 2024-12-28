@@ -1,65 +1,76 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Inter', sans-serif;
-    background-color: #f2f91a; /* Set your desired background color */
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    background-color: #DCD7D1; /* Set your desired body background color */
-  }
-  
-  .top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #DCD7D1; /* Set your desired header background color */
-    box-sizing: border-box;
-    width: 100%;
-    border: none; /* Remove any border */
-    box-shadow: none; /* Remove any box-shadow */
-    padding-right: 32px;
-    
-  }
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-  }
-  
-  .whatever {
-    position: relative;
-    font-size: 48px;
-    font-family: var(--font-inter);
-    color: #000;
-    text-align: center;
-    }
-    
-  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa; /* Set your desired background color */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #DCD7D1; /* Set your desired body background color */
+}
+
+.top-header {
+  position: fixed; /* Make the header fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #DCD7D1; /* Set your desired header background color */
+  box-sizing: border-box;
+  width: 100%;
+  border: none; /* Remove any border */
+  box-shadow: none; /* Remove any box-shadow */
+  z-index: 1000; /* Ensure the header is above other content */
+  padding-right: 32px;
+}
+
+.whatever {
+  position: relative;
+  font-size: 48px;
+  font-family: var(--font-inter);
+  color: #000;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  opacity: 1;
+  transition: opacity 0.5s ease; /* Add transition for fade effect */
+}
+
+.nav-links a.hidden {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction with hidden links */
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 80px; /* Add margin to avoid content being hidden behind the fixed header */
+}
+
+@media (max-width: 2768px) {
   .nav-links {
-    display: flex;
-    gap: 20px;
+    display: none;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: color(rgb(51, 51, 164));
-  }
-  
-  .content {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-  }
+}
