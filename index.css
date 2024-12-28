@@ -6,15 +6,21 @@ html, body {
     background-color: #f8f9fa; /* Set your desired background color */
   }
   
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
   .top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #ffffff; /* Set your desired header background color */
+    background-color: #a71e1e; /* Set your desired header background color */
     box-sizing: border-box;
     width: 100%;
-    /* Remove the border-bottom */
+    border: none; /* Remove any border */
+    box-shadow: none; /* Remove any box-shadow */
   }
   
   .logo {
@@ -38,7 +44,7 @@ html, body {
   }
   
   .content {
+    flex: 1;
     padding: 20px;
-    height: calc(100% - 60px); /* Adjust height to fill the remaining space */
     box-sizing: border-box;
   }

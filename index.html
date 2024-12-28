@@ -12,30 +12,29 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Average Sans:wght@400&display=swap" />
 </head>
 <body>
-  <header class="top-header">
-    <div class="logo">wHaTeVer</div>
-    <nav class="nav-links">
-      <a href="index.html" id="index-link">Index</a>
-      <a href="projects.html" id="projects-link">Projects</a>
-      <a href="blog.html" id="blog-link">Photography</a>
-      <a href="portfolio.html" id="portfolio-link">Portfolio</a>
-    </nav>
-  </header>
+  <div id="header-placeholder"></div>
   <div class="content">
     <h1>Welcome to the Home Page</h1>
     <p>This is the content of the home page.</p>
   </div>
 
   <script>
-    // Get the current page URL
-    const currentPage = window.location.pathname.split('/').pop();
+    // Load the header component
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
 
-    // Hide the link text of the current page
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      if (link.getAttribute('href') === currentPage) {
-        link.style.display = 'none';
-      }
-    });
+        // Get the current page URL
+        const currentPage = window.location.pathname.split('/').pop();
+
+        // Hide the link text of the current page
+        document.querySelectorAll('.nav-links a').forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.style.display = 'none';
+          }
+        });
+      });
   </script>
 </body>
 </html>
