@@ -28,10 +28,11 @@
         // Get the current page URL
         const currentPage = window.location.pathname.split('/').pop();
 
-        // Hide the link text of the current page
+        // Hide the link text of the current page with animation
         document.querySelectorAll('.nav-links a').forEach(link => {
           if (link.getAttribute('href') === currentPage) {
-            link.style.display = 'none';
+            link.style.pointerEvents = 'none';
+            link.style.color = 'grey';
           }
         });
       });

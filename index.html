@@ -31,7 +31,8 @@
         // Hide the link text of the current page with animation
         document.querySelectorAll('.nav-links a').forEach(link => {
           if (link.getAttribute('href') === currentPage) {
-            link.classList.add('hidden');
+            link.style.pointerEvents = 'none';
+            link.style.color = 'grey';
           }
         });
       });
