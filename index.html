@@ -19,12 +19,62 @@
   </div>
 
   <script>
+    // Function to load content dynamically
+    function loadContent(url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(data, 'text/html');
+          const newContent = doc.querySelector('.content').innerHTML;
+          document.getElementById('main-content').innerHTML = newContent;
+          window.history.pushState({ path: url }, '', url);
+          updateNavLinks();
+        })
+        .catch(error => console.error('Error loading content:', error));
+    }
+
+    // Function to update navigation links
+    function updateNavLinks() {
+      const currentPage = window.location.pathname.split('/').pop();
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.style.pointerEvents = 'none';
+          link.style.color = 'grey';
+          document.querySelector('.nav-dot').style.left = link.offsetLeft + 'px';
+        } else {
+          link.style.pointerEvents = 'auto';
+          link.style.color = '';
+        }
+
+        // Add click event to load content dynamically
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          const url = this.getAttribute('href');
+          loadContent(url);
+        });
+
+        // Add hover effect to move the dot
+        link.addEventListener('mouseover', function() {
+          document.querySelector('.nav-dot').style.left = link.offsetLeft + 'px';
+        });
+      });
+    }
+
     // Load the header component
     fetch('header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
+        updateNavLinks();
       });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function(event) {
+      if (event.state && event.state.path) {
+        loadContent(event.state.path);
+      }
+    });
   </script>
 </body>
 </html>
