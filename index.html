@@ -25,6 +25,18 @@
 
 
         <script>
+
+
+// Get the current page URL
+const currentPage = window.location.pathname.split('/').pop();
+
+// Hide the link text of the current page
+document.querySelectorAll('.nav-links a').forEach(link => {
+  if (link.getAttribute('href') === currentPage) {
+    link.style.display = 'none';
+  }
+});
+
         var projectsText = document.getElementById("projects");
         if(projectsText) {
         projectsText.addEventListener("click", function (e) {
