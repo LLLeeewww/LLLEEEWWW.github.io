@@ -1,149 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Projects Page</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', 'Instrument Sans', sans-serif;
-        }
-
-        .Projects {
-            width: 100%;
-            min-height: 100vh;
-            background: rgba(240.71, 235.46, 229.05, 0.90);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            padding: 2rem 1rem;
-        }
-
-        .Header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .Whatever {
-            color: #BC583A;
-            font-size: 2rem;
-        }
-
-        .Frame7 {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .Frame7 div {
-            color: #DCD7D1;
-            font-size: 1rem;
-        }
-
-        .Frame7 .Projects {
-            color: #BC583A;
-        }
-
-        .Line9 {
-            flex-grow: 1;
-            height: 3px;
-            background-color: #BC583A;
-            display: none;
-        }
-
-        .Photos {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .Photos > .Projects {
-            color: #BC583A;
-            font-size: 2.5rem;
-            font-weight: 500;
-        }
-
-        .Frame8, .Frame9, .Frame10 {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .Frame14 {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .Frame14 div {
-            color: #BC583A;
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-
-        @media (min-width: 768px) {
-            .Header {
-                flex-wrap: nowrap;
-            }
-
-            .Line9 {
-                display: block;
-            }
-
-            .Photos > .Projects {
-                font-size: 3rem;
-            }
-
-            .Frame14 div {
-                font-size: 2rem;
-            }
-        }
-    </style>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	
+  	<link rel="stylesheet" href="./global.css" />
+  	<link rel="stylesheet"  href="./index.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inknut Antiqua:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria Serif:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Average Sans:wght@400&display=swap" />
+  	
+  	
+  	
 </head>
 <body>
-    <div class="Projects">
-        <div class="Header">
-            <div class="Whatever">wHaTeVer</div>
-            <div class="Frame7">
-                <div class="Projects">Index</div>
-                <div class="Line9"></div>
-                <div class="Blog">Photography</div>
-                <div class="Portfolio">Portfolio</div>
-            </div>
-        </div>
-        <div class="Photos">
-            <div class="Projects">Projects</div>
-            <div class="Frame8">
-                <div class="Frame14">
-                    <div>ELECTRONICS</div>
-                </div>
-                <div class="Frame14">
-                    <div>Wire-EDM</div>
-                </div>
-            </div>
-            <div class="Frame9">
-                <div class="Frame14">
-                    <div>PROTOTYPING:</div>
-                </div>
-                <div class="Frame14">
-                    <div>BIKE HANDLE<br>CAMERA GRIP<br>BRAIN<br>HOLDER<br>ACTUATOR<br>WIRE-EDM<br>Top Level Camera</div>
-                </div>
-            </div>
-            <div class="Frame10">
-                <div class="Frame14">
-                    <div>ART</div>
-                </div>
-                <div class="Frame14"></div>
-            </div>
-        </div>
-    </div>
-</body>
+  	
+  	<div class="index">
+    		<div class="header">
+      			<div class="whatever">wHaTeVer</div>
+      			<div class="vector-parent">
+        				<img class="frame-child" alt="" src="Line 9.svg">
+        				
+        				<div class="projects" id="projectsText">Projects</div>
+        				<div class="projects" id="blogText">Photography</div>
+        				<div class="projects" id="portfolioText">Portfolio</div>
+      			</div>
+    		</div>
+    		<div class="body">
+      			<div class="top-layer">
+        				<div class="the-porto-of-material-combinat-parent">
+          					<div class="the-porto-of">THE Porto of Material Combination</div>
+          					<div class="dont-make-it">Don’t make it the easy way out, there is no in again</div>
+        				</div>
+        				<img class="image-1-icon" alt="" src="image 1.png">
+        				
+      			</div>
+      			<div class="divider">
+      			</div>
+      			<div class="photography-parent">
+        				<div class="photography">Photography</div>
+        				<div class="why-gears-dont">Why gears don’t match by default</div>
+        				<img class="group-child" alt="" src="Line 1.svg">
+        				
+        				<img class="group-item" alt="" src="Group 3.svg">
+        				
+        				<div class="group-inner">
+        				</div>
+      			</div>
+      			<div class="divider">
+      			</div>
+      			<div class="end">
+        				<div class="contact-me">Contact me</div>
+        				<div class="all-rights-reserved">2024. All rights reserved</div>
+        				<div class="all-rights-reserved">impressum</div>
+        				<div class="all-rights-reserved">Privacy policy</div>
+        				<div class="all-rights-reserved">cookies</div>
+      			</div>
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
+  	<script>
+    		var projectsText = document.getElementById("projectsText");
+    		if(projectsText) {
+      			projectsText.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var blogText = document.getElementById("blogText");
+    		if(blogText) {
+      			blogText.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var portfolioText = document.getElementById("portfolioText");
+    		if(portfolioText) {
+      			portfolioText.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}</script></body>
 </html>
