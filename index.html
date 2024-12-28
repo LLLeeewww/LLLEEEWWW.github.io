@@ -31,7 +31,7 @@
         // Hide the link text of the current page
         document.querySelectorAll('.nav-links a').forEach(link => {
           if (link.getAttribute('href') === currentPage) {
-            link.style.display = 'none';
+            link.style.visibility = 'hidden';
           }
         });
       });
