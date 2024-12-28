@@ -71,7 +71,8 @@ body {
   margin-top: 80px; /* Add margin to avoid content being hidden behind the fixed header */
 }
 
-@media (max-width: 1368px) {
+@media (max-width: 1768px) {
   .nav-links {
     display: none;
   }
+}
