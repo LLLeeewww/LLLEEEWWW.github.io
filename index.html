@@ -15,7 +15,7 @@
   <div id="header-placeholder"></div>
   <div class="content">
     <h1>Welcome to the Home Page</h1>
-    <p>fdsfsf</p>
+    <p>This is the content of the home page.</p>
   </div>
 
   <script>
@@ -31,6 +31,8 @@
         // Hide the link text of the current page with animation
         document.querySelectorAll('.nav-links a').forEach(link => {
           if (link.getAttribute('href') === currentPage) {
+            link.style.pointerEvents = 'none';
+            link.style.color = 'grey';
             link.classList.add('hidden');
           }
         });
