@@ -19,6 +19,7 @@ body {
     .projects {
     position: relative;
     cursor: pointer;
+    padding: 10px;
     }
     .vector-parent {
     flex: 1;
