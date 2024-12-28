@@ -55,6 +55,13 @@
       link.addEventListener('mouseover', function() {
         navDot.style.left = link.offsetLeft + 'px';
       });
+
+      // Move the dot back to the current page link when mouse leaves the link
+      link.addEventListener('mouseleave', function() {
+        if (currentLink) {
+          navDot.style.left = currentLink.offsetLeft + 'px';
+        }
+      });
     });
 
     // Move the dot back to the current page link when mouse leaves the header

@@ -34,8 +34,6 @@ body {
   position: relative;
   font-size: 48px;
   font-family: var(--font-inter);
-  color: #000;
-  text-align: center;
 }
 
 .nav-links {
@@ -50,7 +48,7 @@ body {
   color: #333;
   font-size: 1rem;
   opacity: 0.6;
-  transition: opacity 0.3s ease; /* Add transition for fade effect */
+  transition: opacity 0.5s ease; /* Add transition for fade effect */
 }
 
 .nav-links a::after {
@@ -91,7 +89,7 @@ body {
   height: 8px;
   background-color: #333;
   border-radius: 50%;
-  transition: left 4s ease;
+  transition: left 0.5s ease;
 }
 
 .content {
