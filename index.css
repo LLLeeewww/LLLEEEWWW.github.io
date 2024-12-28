@@ -24,6 +24,11 @@ html, body {
     border: none; /* Remove any border */
     box-shadow: none; /* Remove any box-shadow */
     padding-right: 32px;
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+    }
   }
   
   .whatever {
